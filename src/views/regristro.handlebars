@@ -1,0 +1,34 @@
+<header>
+    <div id="PreHeader">
+        {{> submenu}}
+    </div>
+    <div id="MainHeader">
+        <div id="LogoHeader">Lista del Sol</div>
+        <div id="MenuHeader">{{>menu}}</div>
+    </div>
+</header>
+<main>
+    <div id="container">
+        <h1>Registro de usuarios</h1>
+        {{#if error}}
+            <div class="error">{{error}}</div>
+            {{else}}
+            <h2>Por favor ingresar sus datos en el formulario</h2>
+        {{/if}} 
+        <form class="formSession" action="/api/sessions/registro" method="post">
+            <input type="text" name="nombre" placeholder="Nombre">
+            <input type="text" name="apellido" placeholder="Apellido">
+            <input type="number" name="edad" placeholder="Edad">
+            <input type="email" name="email" placeholder="Correo Electrónico">
+            <input type="password" name="password" placeholder="Password">
+            <input type="text" name="web" value="web" hidden>
+            <input type="submit" value="Registrar">
+        </form>
+    </div>
+</main>
+<footer>
+    <ul>
+        <li><a href="/" title="Home Page">Formulario</a></li>
+        <li><a href="/chat" title="Chat Online">Chat WebSocket</a></li>
+    </ul>
+</footer>

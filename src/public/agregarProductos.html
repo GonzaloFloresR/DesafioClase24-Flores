@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../img/icon.ico">
+    <link href="./css/estilo.css" rel="stylesheet" />
+    <title>Formulario de ingreso de productos</title>
+</head>
+<body>
+    <header>
+        <div id="PreHeader">
+            <ul>
+                <li><a href="/registro">Registro</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/perfil">Perfil</a></li>
+                <li><a href="/api/session/registro">Logout</a></li>
+            </ul>
+        </div>
+        <div id="MainHeader">
+            <div id="LogoHeader">Lista del Sol</div>
+            <div id="MenuHeader">
+                <ul>
+                    <li>
+                        <a href="/home">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="/products">Productos</a>
+                    </li>
+                    <li>
+                        <a href="/chat" >Chat WebSocket</a>
+                    </li>
+                
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="container">
+            <h1>Formulario para ingresar productos</h1>
+            <div id="formulario">   
+                <form  action="http://localhost:8080/api/products/" method="post" enctype="multipart/form-data" >
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" placeholder="Ingresar Title" required />
+                    
+                    <label for="description">Description</label>
+                    <textarea type="text" id="description" name="description" placeholder="Description" required></textarea>
+                    
+                    <label for="price">Price</label>
+                    <input type="number" id="price" name="price" required />
+                    
+                    <label for="code">Code</label>
+                    <input type="text" id="code" name="code" required />
+                    
+                    <label for="stock">Stock</label>
+                    <input type="number" id="stock" name="stock"  required />
+        
+                    <label for="thumbnail">Foto</label>
+                    <input type="file" id="thumbnail" name="thumbnail" />
+                    
+                    <input type="submit" value="Enviar"  required>
+                </form>
+            </div>
+            <!-- <h2>Lista de productos</h2> -->
+            <div id="lista"></div>
+        </div>
+    </main>
+    <footer>
+        
+    </footer>
+    <script src="./js/codigo.js" type="text/javascript"></script>
+</body>
+</html>

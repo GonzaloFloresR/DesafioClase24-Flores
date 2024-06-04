@@ -1,0 +1,28 @@
+<header>
+    <div id="PreHeader">
+        {{> submenu}}
+    </div>
+    <div id="MainHeader">
+        <div id="LogoHeader">Lista del Sol</div>
+        <div id="MenuHeader">{{>menu}}</div>
+    </div>
+</header>
+<main>
+    <div id="container">
+        <div id="chat">
+            <h2>funcionando con Atlas</h2>
+            <label for="mensaje">Mensaje </label><input type="text" id="mensaje" />
+            <div id="mensajes">
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <ul>
+        <li><a href="/home" >Página de Inicio</a></li>
+    </ul>
+    
+</footer>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="/js/chat.js"></script>

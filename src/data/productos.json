@@ -1,0 +1,173 @@
+[
+     {
+          "id": 1,
+          "title": "Sol",
+          "description": "Estrella principal de nuestro sistema",
+          "price": 9990,
+          "thumbnail": "../img/Sol.jpeg",
+          "code": "SunStar",
+          "stock": 1
+     },
+     {
+          "id": 2,
+          "title": "Calcetines",
+          "description": "Par de calcetines con cobre",
+          "price": 5500,
+          "thumbnail": "../img/Calcetines.jpeg",
+          "code": "calc345",
+          "stock": 3
+     },
+     {
+          "id": 3,
+          "title": "Semaforo 3",
+          "description": "Tricolor, verde, amarillo y rojo para su esquina",
+          "price": 250000,
+          "thumbnail": "../img/Semaforo.jpeg",
+          "code": "Sem980",
+          "stock": 100
+     },
+     {
+          "id": 4,
+          "title": "Automovil 4x4",
+          "description": "Automovil 4 ruedas azul con techo negro",
+          "price": 9700000,
+          "thumbnail": "../img/Automovil.png",
+          "code": "car5032",
+          "stock": 1000
+     },
+     {
+          "id": 5,
+          "title": "Estrella 5 puntas",
+          "description": "Estrella con luz propia 5 puntas",
+          "price": 250,
+          "thumbnail": "../img/Estrella.jpeg",
+          "code": "start980",
+          "stock": 1000
+     },
+     {
+          "id": 6,
+          "title": "Latas de Coca Cola",
+          "description": "Pack de 6 latas",
+          "price": 250,
+          "thumbnail": "../img/Soda.jpeg",
+          "code": "gas980",
+          "stock": 150
+     },
+     {
+          "id": 7,
+          "title": "Arco Iris 7 colores",
+          "description": "Hermoso Arco Iris disponible para todos",
+          "price": 1000000,
+          "thumbnail": "../img/ArcoIris.jpeg",
+          "code": "rain980",
+          "stock": 1
+     },
+     {
+          "id": 8,
+          "title": "Pulpo",
+          "description": "Pulmo 8 patas",
+          "price": 500,
+          "thumbnail": "../img/Pulpo.jpeg",
+          "code": "Octp189",
+          "stock": 13
+     },
+     {
+          "id": 9,
+          "title": "Gato",
+          "description": "Lindo gatito",
+          "price": 500,
+          "thumbnail": "../img/Gato.jpeg",
+          "code": "Cat696",
+          "stock": 1
+     },
+     {
+          "id": 10,
+          "title": "Dedos de la mano",
+          "description": "Dedos que se pueden usar para muchas cosas",
+          "price": 350000,
+          "thumbnail": "../img/Dedos.jpeg",
+          "code": "Dedostuf",
+          "stock": 60
+     },
+     {
+          "id": 11,
+          "title": "Par de Esquies para la nieve",
+          "description": "Modernos esquies para el invierno",
+          "price": 550000,
+          "thumbnail": "../img/Esquies.jpeg",
+          "code": "superlogo",
+          "stock": 13
+     },
+     {
+          "id": 12,
+          "title": "Rosas rojas para el amor",
+          "description": "Docena de Rosas para su amor",
+          "price": 15500,
+          "thumbnail": "../img/Rosas.jpeg",
+          "code": "Rose124",
+          "stock": 24
+     },
+     {
+          "id": 13,
+          "title": "Bruja para las noches de terror",
+          "description": "Nada Mejor que una bruja terrorifica",
+          "price": 105000,
+          "thumbnail": "../img/Bruja.jpeg",
+          "code": "Brunuego",
+          "stock": 13
+     },
+     {
+          "id": 14,
+          "title": "Oro de la mejor calidad",
+          "description": "Oro para hacer lo que quieras",
+          "price": 32000,
+          "thumbnail": "../img/Oro.jpeg",
+          "code": "GoldHAlle",
+          "stock": 10
+     },
+     {
+          "id": 15,
+          "title": "Dinero para los bolsillos",
+          "description": "Mucho dinero para compartir con los amigos",
+          "price": "100",
+          "thumbnail": "../img/Dinero.jpeg",
+          "code": "moneY123",
+          "stock": "10000"
+     },
+     {
+          "id": 16,
+          "title": "Velas para cumpleaños",
+          "description": "Velas con diseño \"1\" y \"6\" ideal para cumpleaños de 16 y 61.",
+          "price": "1600",
+          "thumbnail": "../img/Velas.jpeg",
+          "code": "birtCand",
+          "stock": "45"
+     },
+     {
+          "id": 17,
+          "title": "Camión tipo Grua 18 ruedas",
+          "description": "Grúa con 18 ruedas gran camión",
+          "price": "132000000",
+          "thumbnail": "../img/camion.jpeg",
+          "code": "fulltrack",
+          "stock": "10"
+     },
+     {
+          "id": 18,
+          "title": "Golf",
+          "description": "Equipamiento para Golf",
+          "price": "2500000",
+          "thumbnail": "../img/golf.jpeg",
+          "code": "Golf019",
+          "stock": "15"
+     },
+     {
+          "id": 19,
+          "title": "20th Century Fox",
+          "description": "Productora y estudios al mejor precio",
+          "price": "500000000",
+          "thumbnail": "../img/20Fox.jpeg",
+          "code": "studios20",
+          "stock": "1"
+     }
+]

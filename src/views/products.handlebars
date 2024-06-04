@@ -1,0 +1,54 @@
+<header>
+    <div id="PreHeader">
+        {{> submenu}}
+    </div>
+    <div id="MainHeader">
+        <div id="LogoHeader">Lista del Sol</div>
+        <div id="MenuHeader">{{>menu}}</div>
+    </div>
+</header>
+<main>
+    <div id="container">
+        <h1>Productos {{#if login}}Bienvenido/a {{login.rol}} : {{login.first_name}}{{/if}}</h1>
+        <div id="productos">
+                {{#each productos}}
+                    <ul data-id={{_id}}>
+                        <li><h3> {{title}}<h3></li>
+                        <li> {{description}} </li>
+                        <li>$ {{price}} </li>
+                        <li><img src={{thumbnail}} alt={{description}} width="250" > </li>
+                        <li class="codigo">Código: {{code}} </li>
+                        <li class="codigo">Id: {{_id}}</li>
+                        <li>Stock Actual {{stock}} </li>
+                        <li><button class="comprar" onclick="comprar(`{{_id}}`)">Agregar al carrito</button></li>
+                    </ul>
+                {{/each}}
+        </div>
+    </div>
+</main>
+<footer>
+    
+    
+    <input type="text" value="{{carrito}}" id="carrito" hidden />
+    <a href="/carrito/{{carrito}}">Ir a Carrito</a>
+    
+    <ul>
+        {{#if pageInfo.hasPrevPage}}
+            <li><a href="http://localhost:8080/products?limit={{pageInfo.limit}}&page={{pageInfo.prevPage}}"> <<< Pag. Anterior</a></li> 
+        {{/if}}
+            <li><input id="PaginaActual" type="number" max="{{pageInfo.totalPages}}" min="1" step="1" id="PaginaActual" value="{{pageInfo.page}}" name="PaginaActual" onchange="CambioPagina()" ></li>
+        {{!-- <h3>Pagina Actual {{pageInfo.page}}</h3> --}}
+        {{#if pageInfo.hasNextPage}}
+            <li><a href="http://localhost:8080/products?limit={{pageInfo.limit}}&page={{pageInfo.nextPage}}" style="border-left: none;">Próxima Pag.>>> </a></li>
+        {{/if}}
+    </ul>
+</footer>
+<script>
+const CambioPagina = () => {
+    const inputPaginaActual = document.getElementById("PaginaActual");
+    console.log(inputPaginaActual.value)
+    window.location.href ="/products?limit={{{pageInfo.limit}}}&page="+inputPaginaActual.value; 
+}
+</script>
+<script src="/js/productos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

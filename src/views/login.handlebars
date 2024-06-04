@@ -1,0 +1,37 @@
+<header>
+    <div id="PreHeader">
+        {{> submenu}}
+    </div>
+    <div id="MainHeader">
+        <div id="LogoHeader">Lista del Sol</div>
+        <div id="MenuHeader">{{>menu}}</div>
+    </div>
+</header>
+
+<main>
+    <div id="container" >
+        <h1>Login de usuarios</h1>
+        <h2>Ingresar su Usuario (correo eléctronico) y contraseña</h2>
+        <form class="formSession" action="/api/sessions/login" method="post" autocomplete="off">
+        {{#if error}}
+            <div class="error">{{error}}</div>
+            {{else if message}}
+            <div class="succes">{{message}}</div>
+        {{/if}}
+            <input type="email" name="usuario" placeholder="Correo Electrónico" />
+            <input type="password" name="password" placeholder="Password" />
+            <input type="text" name="web" value="web" hidden />
+            <input type="submit" value="Ingresar">
+        </form>
+        <a href="/api/sessions/github" title="Acceder con Github" class="github">Acceder con Github</a>
+    </div>
+</main>
+
+<footer>
+    <ul>
+        <li><a href="/home" >Página de Inicio</a></li>
+    </ul>
+    
+</footer>
+
+

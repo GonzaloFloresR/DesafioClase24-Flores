@@ -1,0 +1,39 @@
+<header>
+    <div id="PreHeader">
+        {{> submenu}}
+    </div>
+    <div id="MainHeader">
+        <div id="LogoHeader">Lista del Sol</div>
+        <div id="MenuHeader">{{>menu}}</div>
+    </div>
+</header>
+<main>
+    <div id="container">
+        <h1>Real Time Productos</h1>
+        <div id="productos">
+            {{#each productos}}
+                <ul data-id={{_id}}>
+                    <li><h3> {{title}}<h3></li>
+                    <li> {{description}} </li>
+                    <li>$ {{price}} </li>
+                    <li><img src={{thumbnail}} alt={{description}} width="250" > </li>
+                    <li class="codigo">Código: {{code}} </li>
+                    <li class="codigo">Id: {{_id}}</li>
+                    <li>Stock Actual {{stock}} </li>
+                    <li><button class="comprar" >Agregar al carrito</button></li>
+                </ul>
+            {{/each}}
+        </div>
+    </div>
+</main>
+<footer>
+    <ul>
+        <li><a href="/" title="Home Page">Formulario</a></li>
+        <li><a href="/chat" title="Chat Online">Chat WebSocket</a></li>
+    </ul>
+</footer>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/js/script.js"></script>
