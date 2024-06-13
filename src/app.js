@@ -7,6 +7,7 @@ const {engine} = require("express-handlebars");
 const {Server} = require("socket.io");
 const cookieParser = require("cookie-parser");
 const passport = require("passport");
+const config = require("./config/config.js");
 const initPassport = require("./config/passport.config.js");
 
 const mensajesModelo = require("./dao/models/MenssageModel.js");
@@ -16,22 +17,23 @@ const cartRouter = require("./routes/carts_router.js");
 const vistasRouter = require("./routes/views_router.js");
 const sessionRouter = require("./routes/session_router.js");
 
-const PORT = 8080;
+const PORT = config.PORT;
 const app = express();
 
 app.use(express.json()); 
 app.use(express.urlencoded({extended:true}));
 app.use(session({
-    secret:"CoderCoder123",
+    secret:config.SECRET,
     resave:true,
     saveUninitialized:true,
     store:MongoStore.create({
         ttl:3600,
-        mongoUrl:"mongodb+srv://gonzalof:Coder098@cluster0.pt1wq7n.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
-        dbName:"ecommerce",
+        mongoUrl:config.MONGO_URL,
+        dbName:config.DB_NAME,
         collectionName:"sessions"
     })
 }));
+
 initPassport();
 app.use(passport.initialize());
 app.use(passport.session()); // Solo si uso sessions
@@ -92,8 +94,8 @@ io.on("connection", socket => {
 
 const connDB = async () => {
     try {
-        await mongoose.connect("mongodb+srv://gonzalof:Coder098@cluster0.pt1wq7n.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
-        {dbName:"ecommerce"});
+        await mongoose.connect(config.MONGO_URL,
+        {dbName:config.DB_NAME});
         console.log("DB MONGO ONLINE");
     } catch (error) {
         console.log("Error al conectar a la DB", error.message)
