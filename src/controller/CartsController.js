@@ -13,7 +13,7 @@ class CartsController {
                 return response.status(200).json(carrito);
             } else {
                 response.setHeader('Content-Type','application/json');
-                return response.status(400).json({error:`No hay carritos activos ❌`});
+                return response.status(400).json({error:`No hay carritos activos`});
             }
         }
         catch(error){
