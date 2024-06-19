@@ -5,9 +5,9 @@ const uploader = require("../utils.js").uploader;
 const {isValidObjectId} = require("mongoose");
 const auth = require("../middleware/auth.js");
 const ProductsController = require("../controller/ProductsController.js");
+const productManager = new ProductManager();
 
 const entorno = async () => {
-    const productManager = new ProductManager();
     
     router.get("/", ProductsController.getProducts);
 
@@ -20,7 +20,7 @@ const entorno = async () => {
         return res.status(400).json({error:`Debe ingresar el ID del producto a modificar`});
     });
 
-    router.put("/:pid", auth, ProductsController.modifyProducto);
+    router.put("/:pid", auth, ProductsController.modifyProduct);
 
     router.delete("/", async(request, response) => {
         response.setHeader('Content-Type','application/json');

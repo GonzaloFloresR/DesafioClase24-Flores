@@ -34,7 +34,6 @@ class ProductManagerMONGO {
 
     async updateProduct(id, Update){
         try {
-            //Ejemplo incrementar 1 {"$inc":{"stock": 1}}
             return await productoModelo.findByIdAndUpdate({"_id":id},Update,{runValidators:true, returnDocument:"after"});
         }
         catch(error){

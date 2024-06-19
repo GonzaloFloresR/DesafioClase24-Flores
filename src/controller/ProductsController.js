@@ -178,7 +178,7 @@ class ProductsController{
         } //cerrando "else" donde confirmamos recibir todos los datos del productos
     }
 
-    static modifyProducto = async(request, response) => {
+    static modifyProduct = async(request, response) => {
         //Debería verificar que al menos modifique una propiedad.
         let {pid} = request.params;
             let producto;
